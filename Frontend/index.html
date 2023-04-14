@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List - Front-end Design</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/fde8e88d64.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="heading">
+      <h1 class="heading__text">To Do List</h1>
+    </div>
+    <main class="main">
+      <section class="input__section sections">
+        <div class="section__heading">
+          <h3 class="section__heading--text">Create new todo</h3>
+        </div>
+        <form class="todoform">
+          <div class="formbox">
+            <div class="todoname">
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Enter todo name"
+                class="todoname__input input"
+              />
+            </div>
+            <div class="indexthing">
+              <input
+                type="number"
+                name="index"
+                required
+                placeholder="Enter index (>0)"
+                class="index input"
+                min="0"
+              />
+              <input
+                type="number"
+                name="priority"
+                required
+                placeholder="Enter priority (1-9)"
+                class="priority input"
+                min="1"
+                max="9"
+              />
+            </div>
+            <div class="btnbox">
+              <button type="submit" class="submit__btn">Add</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="todo__section sections">Todo Section</section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+  <script src="browser.js"></script>
+</html>
