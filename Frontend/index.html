@@ -38,7 +38,7 @@
                 type="number"
                 name="index"
                 required
-                placeholder="Enter index (>0)"
+                placeholder="Enter index [>0]"
                 class="index input"
                 min="0"
               />
@@ -46,7 +46,7 @@
                 type="number"
                 name="priority"
                 required
-                placeholder="Enter priority (1-9)"
+                placeholder="Enter priority [1-9]"
                 class="priority input"
                 min="1"
                 max="9"
@@ -58,9 +58,61 @@
           </div>
         </form>
       </section>
-      <section class="todo__section sections">Todo Section</section>
+      <section class="todo__section sections">
+        <div class="section__heading">
+          <h3 class="section__heading--text">All your todos</h3>
+        </div>
+        <div class="todobox">
+          <div class="todos">
+            <div class="todo__type">
+              <h5>Pending Todos</h5>
+            </div>
+
+            <div class="todo">
+              <div class="todo__name">
+                <span>1. Go sleep (1) []</span>
+              </div>
+              <div class="complete__container">
+                <input type="radio" name="mark" id="complete" />
+                <label for="complete">
+                  <i
+                    data-isCompleted="false"
+                    class="fa-solid fa-circle-check todo__icons complete"
+                  ></i>
+                </label>
+              </div>
+              <div class="cancel__container">
+                <input type="radio" name="mark" id="cancel" />
+                <label for="cancel">
+                  <i
+                    data-isCanceled="false"
+                    class="fa-solid fa-circle-xmark todo__icons cancel"
+                  ></i>
+                </label>
+              </div>
+              <div data-id="" class="todo__delete">
+                <i class="fa-solid fa-trash todo__icons todo__delete--icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
   <script src="script.js"></script>
   <script src="browser.js"></script>
 </html>
+
+<!-- 
+
+
+    <i
+        data-isCanceled="true"
+        class="fa-solid fa-circle-xmark todo__icons todo__cancel--icon"
+    ></i>
+
+                <i
+                  data-isCompleted="false"
+                  class="fa-solid fa-circle-check todo__icons todo__complete--icon"
+                ></i>
+ -->

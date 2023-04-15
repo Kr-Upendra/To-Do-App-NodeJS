@@ -16,6 +16,9 @@
   --green: rgb(1, 201, 1);
   --border: 1px solid var(--green);
   --lightGrey: rgb(179, 178, 178);
+  --boxShadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 * {
@@ -162,6 +165,74 @@ input::-webkit-inner-spin-button {
   width: 100%;
 }
 
+.todobox {
+  margin-top: 2rem;
+  padding-left: 1rem;
+}
+
+.todos {
+  width: 80%;
+}
+
+.todo {
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.55rem;
+  box-shadow: var(--boxShadow);
+  background-color: transparent;
+  border: 1px solid var(--lightGrey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.todo__type {
+  padding: 0 0 0.5rem 0.5rem;
+}
+
+.todo__type h5 {
+  font-size: 0.9rem;
+  color: #baffff9c;
+}
+
+.todo__name {
+  width: 70%;
+  color: var(--whiteColor);
+  font-size: 1.05rem;
+}
+
+.todo__icons {
+  font-size: 1.1rem;
+  color: var(--whiteColor);
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+}
+
+input[type="radio"]:checked + label .complete,
+.complete:hover,
+.complete[data-isCompleted="true"] {
+  color: #3bfc00;
+}
+
+input[type="radio"]:checked + label .cancel,
+.cancel:hover,
+.cancel[data-isCanceled="true"] {
+  color: #fbff00;
+}
+
+.todo__delete--icon:hover {
+  color: #ff3c00;
+}
+
+@media (max-width: 1150px) {
+  .todos {
+    width: 90%;
+  }
+}
+
 @media (max-width: 780px) {
   .main {
     flex-direction: column;
@@ -171,7 +242,8 @@ input::-webkit-inner-spin-button {
     margin-top: 2rem;
   }
 
-  .formbox {
+  .formbox,
+  .todos {
     width: 90%;
   }
 }
@@ -193,7 +265,9 @@ input::-webkit-inner-spin-button {
     margin-top: 2rem;
   }
 
-  .formbox {
+  .formbox,
+  .todos {
     width: 100%;
+    padding-left: 0.35rem;
   }
 }
