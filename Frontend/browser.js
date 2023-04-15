@@ -1,4 +1,4 @@
-const baseUrl = "http://127.0.0.1:5555/api/todos/";
+const baseUrl = "https://to-do-list-nodejs-yd7v.onrender.com/api/todos/";
 const todoArea = document.querySelector(".todos");
 const todoform = document.querySelector(".todoform");
 const nameInput = document.querySelector(".todoname__input");
