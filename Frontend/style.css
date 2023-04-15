@@ -261,6 +261,8 @@ input[type="radio"]:checked + label .cancel,
   place-content: center;
   background-image: var(--BgColor);
   z-index: 10;
+  padding: 1rem;
+  visibility: hidden;
 }
 
 .alert {
