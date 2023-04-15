@@ -35,6 +35,7 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  position: relative;
 }
 
 ul {
@@ -225,6 +226,81 @@ input[type="radio"]:checked + label .cancel,
 
 .todo__delete--icon:hover {
   color: #ff3c00;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(1, 63, 92);
+  opacity: 0.7;
+  display: grid;
+  place-content: center;
+  visibility: hidden;
+}
+
+.load {
+  border: 5px solid transparent;
+  border-top-color: var(--whiteColor);
+  border-bottom-color: var(--whiteColor);
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: loader 2s ease infinite;
+}
+
+.alertbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-image: var(--BgColor);
+  z-index: 10;
+}
+
+.alert {
+  padding: 5rem 10rem;
+  border-radius: 0.35rem;
+  border-color: 1.5px solid var(--lightGrey);
+  background-color: var(--whiteColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: var(--boxShadow);
+}
+
+.alert__message {
+  color: var(--darkRed);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.alert__confirm {
+  padding: 0.55rem 2rem;
+  border-radius: 0.3rem;
+  background-color: var(--lightBlue);
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.25rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 @media (max-width: 1150px) {

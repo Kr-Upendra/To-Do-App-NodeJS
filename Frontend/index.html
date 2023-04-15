@@ -70,23 +70,116 @@
 
             <div class="todo">
               <div class="todo__name">
-                <span>1. Go sleep (1) []</span>
+                <span>1. Go sleep (1) <span class="todostatus">[]</span></span>
               </div>
               <div class="complete__container">
-                <input type="radio" name="mark" id="complete" />
-                <label for="complete">
+                <input
+                  type="radio"
+                  class="radiobtn"
+                  value="completed"
+                  name="todo-1"
+                  id="complete-1"
+                />
+                <label for="complete-1">
                   <i
-                    data-isCompleted="false"
-                    class="fa-solid fa-circle-check todo__icons complete"
+                    data-iscompleted=""
+                    class="fa-solid fa-circle-check todo__icons complete ccicons"
                   ></i>
                 </label>
               </div>
               <div class="cancel__container">
-                <input type="radio" name="mark" id="cancel" />
-                <label for="cancel">
+                <input
+                  type="radio"
+                  class="radiobtn"
+                  value="canceled"
+                  name="todo-1"
+                  id="cancel-1"
+                />
+                <label for="cancel-1">
                   <i
-                    data-isCanceled="false"
-                    class="fa-solid fa-circle-xmark todo__icons cancel"
+                    data-iscanceled=""
+                    class="fa-solid fa-circle-xmark todo__icons cancel ccicons"
+                  ></i>
+                </label>
+              </div>
+              <div data-id="" class="todo__delete">
+                <i class="fa-solid fa-trash todo__icons todo__delete--icon"></i>
+              </div>
+            </div>
+
+            <div class="todo">
+              <div class="todo__name">
+                <span>2. Eat food (2) <span class="todostatus">[]</span></span>
+              </div>
+              <div class="complete__container">
+                <input
+                  type="radio"
+                  class="radiobtn"
+                  value="completed"
+                  name="todo-2"
+                  id="complete-2"
+                />
+                <label for="complete-2">
+                  <i
+                    data-iscompleted=""
+                    class="fa-solid fa-circle-check todo__icons complete ccicons"
+                  ></i>
+                </label>
+              </div>
+              <div class="cancel__container">
+                <input
+                  type="radio"
+                  class="radiobtn"
+                  value="canceled"
+                  name="todo-2"
+                  id="cancel-2"
+                />
+                <label for="cancel-2">
+                  <i
+                    data-iscanceled=""
+                    class="fa-solid fa-circle-xmark todo__icons cancel ccicons"
+                  ></i>
+                </label>
+              </div>
+              <div data-id="" class="todo__delete">
+                <i class="fa-solid fa-trash todo__icons todo__delete--icon"></i>
+              </div>
+            </div>
+
+            <div class="todo">
+              <div class="todo__name">
+                <span
+                  >3. Do your homework! (3)
+                  <span class="todostatus">[]</span></span
+                >
+              </div>
+              <div class="complete__container">
+                <input
+                  type="radio"
+                  class="radiobtn"
+                  value="completed"
+                  name="todo-3"
+                  id="complete-3"
+                />
+                <label for="complete-3">
+                  <i
+                    data-iscompleted=""
+                    class="fa-solid fa-circle-check todo__icons complete ccicons"
+                  ></i>
+                </label>
+              </div>
+              <div class="cancel__container">
+                <input
+                  type="radio"
+                  class="radiobtn"
+                  value="canceled"
+                  name="todo-3"
+                  id="cancel-3"
+                />
+                <label for="cancel-3">
+                  <i
+                    data-iscanceled=""
+                    class="fa-solid fa-circle-xmark todo__icons cancel ccicons"
                   ></i>
                 </label>
               </div>
@@ -98,21 +191,15 @@
         </div>
       </section>
     </main>
+    <div class="loader">
+      <div class="load"></div>
+    </div>
+    <div class="alertbox">
+      <div class="alert">
+        <h5 class="alert__message">Your connection is too low.</h5>
+        <button class="alert__confirm">OKAY</button>
+      </div>
+    </div>
   </body>
   <script src="script.js"></script>
-  <script src="browser.js"></script>
 </html>
-
-<!-- 
-
-
-    <i
-        data-isCanceled="true"
-        class="fa-solid fa-circle-xmark todo__icons todo__cancel--icon"
-    ></i>
-
-                <i
-                  data-isCompleted="false"
-                  class="fa-solid fa-circle-check todo__icons todo__complete--icon"
-                ></i>
- -->
