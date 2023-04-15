@@ -15,7 +15,9 @@
   </head>
   <body>
     <div class="heading">
-      <h1 class="heading__text">To Do List</h1>
+      <h1 class="heading__text">
+        <a class="logo" href="/Frontend/index.html">To Do List</a>
+      </h1>
     </div>
     <main class="main">
       <section class="input__section sections">
@@ -31,6 +33,9 @@
                 required
                 placeholder="Enter todo name"
                 class="todoname__input input"
+                autocapitalize="on"
+                autofocus="on"
+                autocomplete="off"
               />
             </div>
             <div class="indexthing">
@@ -67,8 +72,27 @@
             <div class="todo__type">
               <h5>Pending Todos</h5>
             </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <div class="loader">
+      <div class="load"></div>
+    </div>
+    <div class="alertbox">
+      <div class="alert">
+        <h5 class="alert__message">Your connection is too low.</h5>
+        <button class="alert__confirm">OKAY</button>
+      </div>
+    </div> -->
+  </body>
+  <script src="browser.js"></script>
+  <script src="script.js"></script>
+</html>
 
-            <div class="todo">
+<!-- 
+
+                <div class="todo">
               <div class="todo__name">
                 <span>1. Go sleep (1) <span class="todostatus">[]</span></span>
               </div>
@@ -187,19 +211,4 @@
                 <i class="fa-solid fa-trash todo__icons todo__delete--icon"></i>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <div class="loader">
-      <div class="load"></div>
-    </div>
-    <div class="alertbox">
-      <div class="alert">
-        <h5 class="alert__message">Your connection is too low.</h5>
-        <button class="alert__confirm">OKAY</button>
-      </div>
-    </div>
-  </body>
-  <script src="script.js"></script>
-</html>
+ -->

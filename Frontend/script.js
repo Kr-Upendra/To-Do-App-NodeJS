@@ -1,16 +1,8 @@
 const completeInputIcon = document.querySelectorAll(".complete");
 const cancelInputIcon = document.querySelectorAll(".cancel");
 const todoStatus = document.querySelectorAll(".todostatus");
-const label = document.querySelectorAll("label");
 const icons = document.querySelectorAll(".ccicons");
 const radioButtons = document.querySelectorAll(".radiobtn");
-const deleteBtn = document.querySelectorAll(".todo__delete--icon");
-const loader = document.querySelector(".loader");
-const submitBtn = document.querySelector(".submit__btn");
-const alertBox = document.querySelector(".alertbox");
-const alertBtn = document.querySelector(".alert__confirm");
-const alertMessage = document.querySelector(".alert__message");
-const todo = document.querySelectorAll(".todo");
 
 const radioFunction = () => {
   for (let i = 0; i < icons.length; i++) {
@@ -39,14 +31,3 @@ const fillBrackets = () => {
     } else todoStatus.innerHTML = "[]";
   }
 };
-
-// const showAlert = () => {
-//   alertBox.style.visibility = "visible";
-//   alertMessage.innerHTML = "To do added successfully!";
-// };
-
-// const hideAlert = () => {
-//   alertBox.style.visibility = "hidden";
-// };
-
-// const sets = setTimeout(hideAlert, 3000);
