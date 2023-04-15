@@ -232,6 +232,18 @@ input[type="radio"]:checked + label .cancel,
   color: var(--whiteColor);
 }
 
+.todonums {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.todonums span {
+  color: var(--whiteColor);
+}
+
 @keyframes loader {
   0% {
     transform: rotate(0turn);
@@ -242,7 +254,8 @@ input[type="radio"]:checked + label .cancel,
 }
 
 @media (max-width: 1150px) {
-  .todos {
+  .todos,
+  .todonums {
     width: 90%;
   }
 }
@@ -257,7 +270,8 @@ input[type="radio"]:checked + label .cancel,
   }
 
   .formbox,
-  .todos {
+  .todos,
+  .todonums {
     width: 90%;
   }
 }
@@ -280,7 +294,8 @@ input[type="radio"]:checked + label .cancel,
   }
 
   .formbox,
-  .todos {
+  .todos,
+  .todonums {
     width: 100%;
     padding-left: 0.35rem;
   }

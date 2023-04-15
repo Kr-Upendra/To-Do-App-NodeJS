@@ -3,10 +3,14 @@ import TodoModel from "../models/todoModel.js";
 const getAllTodos = async (req, res) => {
   try {
     const todos = await TodoModel.find().sort({ priorityIndex: 1 });
+    const completedTodos = await TodoModel.find().count({ isCompleted: 1 });
+    const canceledTodos = await TodoModel.find().count({ isCanceled: 1 });
     res.status(200).json({
       status: "success",
       message: "successfully got all todos!",
       totalTodos: todos.length,
+      completedTodos: completedTodos,
+      canceledTodos: canceledTodos,
       todos: todos,
     });
   } catch (err) {

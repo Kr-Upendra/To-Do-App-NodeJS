@@ -4,6 +4,9 @@ const todoform = document.querySelector(".todoform");
 const nameInput = document.querySelector(".todoname__input");
 const indexInput = document.querySelector(".todo__index");
 const priorityInput = document.querySelector(".todo__priority");
+const pendingTodo = document.querySelector(".pending__todo--num");
+const completedTodo = document.querySelector(".completed__todo--num");
+const canceledTodo = document.querySelector(".canceled__todo--num");
 
 // Show all Todos
 
@@ -12,6 +15,15 @@ const showAllTodos = async () => {
     const response = await axios.get(baseUrl);
     const todoList = response.data.todos;
     const todoSize = response.data.totalTodos;
+    const completedTodoNumber = response.data.completedTodos;
+    const canceledTodoNumber = response.data.canceledTodos;
+    const pendingTodoNumber =
+      todoSize - (completedTodoNumber + canceledTodoNumber);
+
+    completedTodo.innerHTML = `Completed Todo: ${completedTodoNumber || 0}`;
+    pendingTodo.innerHTML = `Pending Todo: ${pendingTodoNumber || 0} `;
+    canceledTodo.innerHTML = `Canceled Todo: ${canceledTodoNumber || 0} `;
+
     if (todoSize < 1) {
       todoArea.innerHTML = `<h3>You still not have added any todo!</h3>`;
       return;
@@ -74,6 +86,7 @@ const showAllTodos = async () => {
       todoArea.innerHTML = allTodos;
     }
   } catch (err) {
+    console.log(err);
     todoArea.innerHTML =
       "<h3>Some error occured! please try again later..</h3>";
   }
